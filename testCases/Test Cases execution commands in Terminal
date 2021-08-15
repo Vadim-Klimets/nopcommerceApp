@@ -1,0 +1,54 @@
+pytest -v -s testCases/test_login.py
+pytest -v -s testCases/test_login.py --browser chrome
+pytest -v -s testCases/test_login.py --browser firefox
+
+#DDT
+# To Run Test Cases at default browser
+pytest -v -s testCases/test_login.py
+
+# To Run Test Cases at certain Browser
+pytest -v -s testCases/test_login.py --browser chrome
+pytest -v -s testCases/test_login.py --browser firefox
+
+# To Run Test Cases at certain Browser in parallel
+pytest -v -s -n=3 testCases/test_login.py --browser chrome
+pytest -v -s -n=3 testCases/test_login.py --browser firefox
+
+# To Run Test Cases with Pytest HTML Report Generation
+pytest -v --html=Reports\report.html testCases/test_login.py --browser chrome
+pytest -v -n=2 --html=Reports\report.html testCases/test_login.py --browser chrome
+
+# To Run Data Driven Cases Pytest HTML Report Generation
+pytest -v --html=Reports\report.html testCases/test_login_ddt.py --browser chrome
+
+
+
+# To Run Test Cases at certain Browser in parallel
+pytest -v -s -n=3 testCases/test_login.py --browser chrome
+ytest -v -s -n=3 testCases/test_login.py --browser firefox
+
+# To Run Test Cases with Pytest HTML Report Generation
+pytest -v --html=Reports\report.html testCases/test_login.py --browser chrome
+pytest -v -n=2 --html=Reports\report.html testCases/test_login.py --browser chrome
+
+# To Run Data Driven Cases Pytest HTML Report Generation
+pytest -v --html=Reports\report.html testCases/test_login_ddt.py --browser chrome
+
+
+
+pytest -v --html=Reports\report.html testCases/test_addCustomer.py --browser chrome
+pytest -v --html=Reports\report.html testCases/test_addCustomer.py --browser firefox
+pytest -v --html=Reports\report.html testCases/test_addCustomer.py --browser edge
+
+
+pytest -v --html=Reports\report.html testCases/test_searchCustomerByEmail.py --browser chrome
+
+pytest -v --html=Reports\report.html testCases/test_searchCustomerByName.py --browser chrome
+
+
+pytest -v -m "sanity" --html=./Reports/report.html testCases/ --browser chrome
+pytest -v -m "regression" --html=./Reports/report.html testCases/ --browser chrome
+pytest -v -m "sanity and regression" --html=./Reports/report.html testCases/ --browser chrome
+pytest -v -m "sanity or regression" --html=./Reports/report.html testCases/ --browser chrome
+
+
