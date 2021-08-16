@@ -27,5 +27,5 @@ rem pytest -v -m "sanity and regression" --html=./Reports/report_egde.html testC
 rem pytest -v -m "sanity and regression" --html=./Reports/report_firefox.html testCases/ --browser firefox
 
 pytest -v --html=./Reports/report_chrome.html testCases/ --browser chrome
-pytest -v --html=./Reports/report_egde.html testCases/ --browser edge
+rem pytest -v --html=./Reports/report_egde.html testCases/ --browser edge
 rem pytest -v --html=./Reports/report_firefox.html testCases/ --browser firefox
